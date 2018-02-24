@@ -22,7 +22,7 @@ function initMap() {
 
   // This customizes link to view source code; add your own GitHub repository
   map.attributionControl
-  .setPrefix('View <a href="http://github.com/jackdougherty/leaflet-storymap" target="_blank">code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+  .setPrefix('Created by <a href="https://github.com/lukesdevelopment/tourmap" target="_blank">LukesDevelopment</a>, with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
   // This loads the GeoJSON map data file from a local folder
   $.getJSON('map.geojson', function(data) {
@@ -34,7 +34,7 @@ function initMap() {
           var numericMarker = L.ExtraMarkers.icon({
             icon: 'fa-number',
             number: feature.properties['id'],
-            markerColor: 'blue'
+            markerColor: 'red'
           });
           layer.setIcon(numericMarker);
 
@@ -105,7 +105,7 @@ function initMap() {
     });
 
     $('div#container1').addClass("inFocus");
-    $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Top</small></a></div>");
+    $('#contents').append("<div class='space-at-the-bottom'><a href='#space-at-the-top'><i class='fa fa-chevron-up'></i></br><small>Torna su</small></a></div>");
     map.fitBounds(geojson.getBounds());
     geojson.addTo(map);
   });
